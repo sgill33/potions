@@ -33,7 +33,7 @@ export class Container {
     const carriedItem = mob.carrying;
 
     if (carriedItem && carriedItem.type === this.getType()) {
-      if (carriedItem.subtype != this.item.subtype) {
+      if (this.getType() !== 'basket' && carriedItem.subtype != this.item.subtype ) {
         return false;
       }
       
